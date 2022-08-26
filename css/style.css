@@ -448,31 +448,6 @@ body {
   height: 30%;
 }
 
-.event-left-1 {
-  background: url('../images/event-left-1.png') no-repeat center;
-  background-size: cover;
-}
-.event-left-2 {
-  background: url('../images/event-left-2.png') no-repeat center;
-  background-size: cover;
-}
-.event-left-3 {
-  background: url('../images/event-left-3.png') no-repeat center;
-  background-size: cover;
-}
-.event-left-4 {
-  background: url('../images/event-left-4.png') no-repeat center;
-  background-size: cover;
-}
-.event-left-5 {
-  background: url('../images/event-left-5.png') no-repeat center;
-  background-size: cover;
-}
-.event-left-6 {
-  background: url('../images/event-left-6.png') no-repeat center;
-  background-size: cover;
-}
-
 .event-left-ctrl {
   position: absolute;
   left: 10px;
