@@ -1,4 +1,15 @@
 $(document).ready(function(){
+  // Modal 기능
+  let modalWrap = $('.modal-wrap');
+  let modalClose = $('.modal-close');
+  // click() 을 이용해서 hide() 해보자!
+  modalClose.click(function(){
+    // modalWrap.hide();
+    modalWrap.stop().fadeOut(300);
+  });
+});
+
+$(document).ready(function(){
   // 메뉴열기
   let header_menu = $('.header-menu');
   let menu = $('.menu');
