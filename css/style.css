@@ -53,8 +53,61 @@ body {
 }
 /* ==== //common ==== */
 
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.64;
+  color: #444;
+}
+
+/* === 공통요소 === */
+.clearfix::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.inner {
+  position: relative;
+  display: block;
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /* Modal Popup */
 .modal-wrap {
+  font-family: 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
   position: fixed;
   left: 0;
   top: 0;
@@ -84,7 +137,7 @@ body {
   height: 86px;
   border-radius: 43px;
   border: 4px solid #fff;
-  background: #242A53 url('../images/ahn-symbol_300x300_white.png') no-repeat center;
+  background: #00b7ff url('../images/ahn-symbol_300x300_white.png') no-repeat center;
   background-size: 60%;
 }
 
@@ -98,7 +151,7 @@ body {
 }
 
 .modal-notice strong {
-  color: #8366b4;
+  color: #ec3f87;
 }
 
 .modal-notice span {
@@ -107,6 +160,22 @@ body {
   font-weight: 400;
   margin-top: 8px;
   letter-spacing: -0.8px;
+}
+
+.modal-corrections::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+  background-color: #f7f7f7;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.modal-corrections::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }
 
 .modal-corrections {
@@ -118,6 +187,7 @@ body {
   background: #eee;
   margin: 0 auto;
   padding: 15px 20px;
+  letter-spacing: -0.8px;
 }
 
 .modal-corrections strong {
@@ -129,14 +199,9 @@ body {
   line-height: 30px;
 }
 
-/* .modal-corrections ul {
-  margin-bottom: 2px;
-} */
-
 .corrections-number {
   float: left;
   width: 6%;
-  /* font-weight: 700; */
 }
 
 .corrections-txt {
@@ -160,7 +225,14 @@ body {
   color: #fff;
 
   cursor: pointer;
-  background: #242A53;
+  background: #00b7ff;
+}
+
+.modal-close i {
+  margin-left: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
 }
 /* /Modal Popup */
 
