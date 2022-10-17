@@ -1,4 +1,4 @@
-@charset 'utf-8';
+@charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 @import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 
@@ -36,60 +36,6 @@ body {
   letter-spacing: -0.32px;
 }
 
-/* ==== common ==== */
-.inner {
-  position: relative;
-  display: block;
-  width: 100%;
-  max-width: 1184px;
-  margin: 0 auto;
-}
-
-.clearfix::after {
-  content: '';
-  position: relative;
-  display: block;
-  width: 100%;
-  clear: both;
-}
-/* ==== //common ==== */
-
-@charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-ul, li {
-  list-style: none;
-}
-
-a {
-  color: #333;
-  text-decoration: none;
-}
-
-img {
-  vertical-align: middle;
-  border: 0;
-}
-
-html {
-  font-size: 16px;
-}
-
-body {
-  font-family: 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.4;
-  letter-spacing: -0.64;
-  color: #444;
-}
-
 /* === 공통요소 === */
 .clearfix::after {
   content: '';
@@ -102,7 +48,7 @@ body {
 .inner {
   position: relative;
   display: block;
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -235,6 +181,105 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+@media screen and (max-width: 700px) {
+  .modal-main {
+    width: 71vw;
+    height: 57vw;
+  }
+
+  .modal-notice {
+    padding: 15% 6% 6% 6%;
+    font-size: 2.4vw;
+    line-height: 3.2vw;
+  }
+  
+  .modal-notice span {
+    font-size: 2.3vw;
+    margin-top: 2%;
+  }
+
+  .modal-logo {
+    width: 12.3vw;
+    height: 12.3vw;
+    border: 0.5vw solid #fff;
+  }
+
+  .modal-corrections {
+    width: 88%;
+    height: 33.75%;
+    padding: 2vw 3vw;
+  }
+  
+  .modal-close {
+    width: 71.1vw;
+    height: 6.5vw;
+    font-size: 2.5vw;
+    line-height: 6.5vw;
+  }
+
+  .modal-close i {
+    font-size: 2.3vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .modal-main {
+    width: 300px;
+    height: 245px;
+  }
+
+  .modal-notice {
+    padding: 15% 6% 5% 6%;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  
+  .modal-notice span {
+    font-size: 11px;
+  }
+
+  .modal-logo {
+    width: 60px;
+    height: 60px;
+    border: 0.5vw solid #fff;
+  }
+
+  .modal-corrections {
+    width: 260px;
+    height: 80px;
+    padding: 10px 15px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+  
+  .modal-corrections strong {
+    font-size: 11px;
+    margin-bottom: 4px;
+    line-height: 14px;
+  }
+  
+  .corrections-number {
+    float: left;
+    width: 6%;
+  }
+  
+  .corrections-txt {
+    float: right;
+    width: 94%;
+  }
+
+  .modal-close {
+    width: 301px;
+    height: 25px;
+    font-size: 11px;
+    line-height: 25px;
+  }
+
+  .modal-close i {
+    display: none;
+  }
+}
 /* /Modal Popup */
 
 /* menu */
@@ -244,7 +289,7 @@ body {
   top: 0;
   display: block;
   width: 480px;
-  height: 100vw;
+  height: 100%;
   background: #fff;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
   z-index: 99999;
@@ -361,6 +406,76 @@ body {
 
 .mn-etc ul li:last-child {
   margin-top: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    width: 60%;
+  }
+  
+  .mn-category li {
+    width: calc(90% / 4);
+    margin-right: 3.3%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .menu h3 {
+    position: relative;
+    display: block;
+    font-size: 22px;
+    line-height: 48px;
+    margin: 15px 16px 0 25px;
+  }
+  
+  .mn-cart {
+    right: 55px;
+    top: 18px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .mn-close {
+    right: 16px;
+    top: 18px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .mn-category {
+    position: relative;
+    display: block;
+    margin: 5px 10px 0 25px;
+  }
+
+  .mn-category li {
+    width: calc(90% / 2);
+    height: 128px;
+    margin-right: 5%;
+  }
+  
+  .mn-category li:nth-child(2n) {
+    margin-right: 0%;
+  }
+
+  .mn-category li p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .mn-etc ul {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .mn-etc ul li {
+    margin-bottom: 21px;
+    cursor: pointer;
+  }
+  
+  .mn-etc ul li:last-child {
+    margin-top: 40px;
+  }
 }
 
 /* header */
@@ -543,7 +658,6 @@ body {
   }
 }
 
-
 @media screen and (max-width: 900px) {
   .logo {
     left: 2%;
@@ -577,6 +691,12 @@ body {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .gnb {
+    display: none;
+  }
+}
+
 /* visual */
 .visual {
   position: relative;
@@ -602,10 +722,23 @@ body {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .visual {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .visual {
+    height: 250px;
+  }
+}
+
 /* event */
 .event {
   position: relative;
   display: block;
+  width: 100vw;
   margin-top: 50px;
   margin-bottom: 80px;
   overflow: hidden;
@@ -693,6 +826,7 @@ body {
 
 @media screen and (max-width: 1300px) {
   .event {
+    width: 100%;
     margin-top: 30px;
     margin-bottom: 80px;
   }
@@ -759,12 +893,26 @@ body {
   .event-left-ctrl {
     width: 95px;
     height: 28px;
+    bottom: 6%;
   }
 
   .event-left-pg {
     height: 28px;
     font-size: 12px;
     line-height: 28px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .event-left-ctrl {
+    left: 15px;
+    width: 80px;
+    height: 26px;
+  }
+  
+  .event-left-pg {
+    font-size: 10px;
+    line-height: 26px;
   }
 }
 
@@ -933,6 +1081,13 @@ body {
     height: 42.5vw;
   }
   
+  .goods-bestseller li button {
+    width: 7.5vw;
+    min-width: 50px;
+    height: 7.5vw;
+    min-height: 50px;
+  }
+  
   .goods h5 {
     font-size: 26px;
     margin-bottom: 25px;
@@ -950,6 +1105,46 @@ body {
 
   .goods-bs-right {
     display: none;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .goods-bestseller li span {
+    position: absolute;
+    left: 8%;
+    top: 4%;
+    display: block;
+    width: 55px;
+    height: 28px;
+    background: url('../images/antibiotic-free.svg') no-repeat center;
+    background-size: contain;
+    font-size: 0;
+  }
+
+  .goods-bestseller li button {
+    min-width: 45px;
+    min-height: 45px;
+    right: 10%;
+    bottom: 35%;
+  }
+  
+  .goods-bestseller li h6 {
+    font-size: 15px;
+    width: 100%;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .goods-bestseller li p {
+    font-size: 13px;
+    width: 100%;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
 
@@ -1108,7 +1303,7 @@ body {
 .footer-bt-left {
   position: relative;
   display: block;
-  width: 485px;
+  max-width: 485px;
   float: left;
 }
 
@@ -1139,6 +1334,10 @@ body {
   letter-spacing: -0.2px;
   margin-right: 8px;
   float: left;
+}
+
+.footer-res {
+  display: none;
 }
 
 .footer-bt-infor span a {
@@ -1242,5 +1441,28 @@ body {
 @media screen and (max-width: 850px) {
   .footer-bt-right {
     display: none;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .footer-bt-infor span {
+    font-size: 12.5px;
+    white-space: no-wrap;
+  }
+
+  .ft-top-left {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .footer-bt-infor span {
+    font-size: 10px;
+    line-height: 18px;
+    white-space: normal;
+  }
+
+  .footer-res {
+    display: block;
   }
 }
